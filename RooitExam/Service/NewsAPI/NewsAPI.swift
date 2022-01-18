@@ -80,7 +80,7 @@ extension NewsAPI {
     typealias ResultHandler<D: Decodable> = (Result<D, Error>) -> Void
     
     func getTopHeadlines(country: String,
-                         resultHandler: @escaping ResultHandler<[TopHeadlineResponse.Article]>) {
+                         resultHandler: @escaping ResultHandler<[Article]>) {
         let request = TopHeadlineRequest(country: country)
         send(request: request) { result in
             switch result {

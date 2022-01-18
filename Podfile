@@ -7,4 +7,6 @@ target 'RooitExam' do
 
   # Pods for RooitExam
   pod 'Moya', '~> 15.0'
+  pod 'RealmSwift', '~>10'
+
 end

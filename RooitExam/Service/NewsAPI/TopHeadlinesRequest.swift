@@ -6,6 +6,7 @@
 //
 
 import Moya
+import RealmSwift
 
 // MARK: - TopHeadlineRequest
 struct TopHeadlineRequest: NewsRequest {
@@ -35,27 +36,26 @@ struct TopHeadlineResponse: Decodable {
     let status: String
     let totalResults: Int
     let articles: [Article]
-    
-    struct Article: Codable {
-        let source: Source
-        let author: String?
-        let title: String
-        let articleDescription: String?
-        let url: String
-        let urlToImage: String?
-        let publishedAt: String
-        let content: String?
+}
 
-        enum CodingKeys: String, CodingKey {
-            case source, author, title
-            case articleDescription = "description"
-            case url, urlToImage, publishedAt, content
-        }
-    }
+class Article: Object, Codable {
+    @Persisted var source: Source?
+    @Persisted var author: String?
+    @Persisted var title: String
+    @Persisted var articleDescription: String?
+    @Persisted var url: String
+    @Persisted var urlToImage: String?
+    @Persisted var publishedAt: String
+    @Persisted var content: String?
 
-    struct Source: Codable {
-        let id: String?
-        let name: String
+    enum CodingKeys: String, CodingKey {
+        case source, author, title
+        case articleDescription = "description"
+        case url, urlToImage, publishedAt, content
     }
 }
 
+class Source: Object, Codable {
+    @Persisted var id: String?
+    @Persisted var name: String
+}

@@ -16,11 +16,20 @@
 		5E09743C2796BE2000580BE7 /* TopHeadlinesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E09743B2796BE2000580BE7 /* TopHeadlinesRequest.swift */; };
 		5E0974472796BF2F00580BE7 /* RooitExamNewsAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0974462796BF2F00580BE7 /* RooitExamNewsAPITests.swift */; };
 		5E0974502796C3A000580BE7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E09744F2796C3A000580BE7 /* Constants.swift */; };
+		5E09745E2796CF9A00580BE7 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E09745D2796CF9A00580BE7 /* Database.swift */; };
+		5E09746B2796D66300580BE7 /* RooitExamDatabaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E09746A2796D66300580BE7 /* RooitExamDatabaseTests.swift */; };
 		ADED059B2175AB0F46554A10 /* Pods_RooitExam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 182FDC4A10C3AABB0EE27907 /* Pods_RooitExam.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		5E0974482796BF2F00580BE7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5E0974122796BA8B00580BE7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5E0974192796BA8B00580BE7;
+			remoteInfo = RooitExam;
+		};
+		5E09746C2796D66300580BE7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5E0974122796BA8B00580BE7 /* Project object */;
 			proxyType = 1;
@@ -44,6 +53,9 @@
 		5E0974442796BF2F00580BE7 /* RooitExamNewsAPITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RooitExamNewsAPITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E0974462796BF2F00580BE7 /* RooitExamNewsAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RooitExamNewsAPITests.swift; sourceTree = "<group>"; };
 		5E09744F2796C3A000580BE7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		5E09745D2796CF9A00580BE7 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		5E0974682796D66300580BE7 /* RooitExamDatabaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RooitExamDatabaseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E09746A2796D66300580BE7 /* RooitExamDatabaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RooitExamDatabaseTests.swift; sourceTree = "<group>"; };
 		6744507A0BEED1136BFADFE4 /* Pods-RooitExam.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RooitExam.release.xcconfig"; path = "Target Support Files/Pods-RooitExam/Pods-RooitExam.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -63,6 +75,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5E0974652796D66300580BE7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -72,6 +91,7 @@
 				5E09744F2796C3A000580BE7 /* Constants.swift */,
 				5E09741C2796BA8B00580BE7 /* RooitExam */,
 				5E0974452796BF2F00580BE7 /* RooitExamNewsAPITests */,
+				5E0974692796D66300580BE7 /* RooitExamDatabaseTests */,
 				5E09741B2796BA8B00580BE7 /* Products */,
 				DAD79232B95354A9681341D2 /* Pods */,
 				F1A26441CBE06C772D66BDCE /* Frameworks */,
@@ -83,6 +103,7 @@
 			children = (
 				5E09741A2796BA8B00580BE7 /* RooitExam.app */,
 				5E0974442796BF2F00580BE7 /* RooitExamNewsAPITests.xctest */,
+				5E0974682796D66300580BE7 /* RooitExamDatabaseTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -100,6 +121,7 @@
 		5E0974312796BA9200580BE7 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				5E0974612796D5F900580BE7 /* News */,
 				5E0974322796BA9800580BE7 /* Main */,
 			);
 			path = Scene;
@@ -127,6 +149,7 @@
 		5E0974352796BC1600580BE7 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				5E09745C2796CF7B00580BE7 /* Database */,
 				5E0974362796BC2900580BE7 /* NewsAPI */,
 			);
 			path = Service;
@@ -148,6 +171,29 @@
 				5E0974462796BF2F00580BE7 /* RooitExamNewsAPITests.swift */,
 			);
 			path = RooitExamNewsAPITests;
+			sourceTree = "<group>";
+		};
+		5E09745C2796CF7B00580BE7 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				5E09745D2796CF9A00580BE7 /* Database.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		5E0974612796D5F900580BE7 /* News */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		5E0974692796D66300580BE7 /* RooitExamDatabaseTests */ = {
+			isa = PBXGroup;
+			children = (
+				5E09746A2796D66300580BE7 /* RooitExamDatabaseTests.swift */,
+			);
+			path = RooitExamDatabaseTests;
 			sourceTree = "<group>";
 		};
 		DAD79232B95354A9681341D2 /* Pods */ = {
@@ -207,6 +253,24 @@
 			productReference = 5E0974442796BF2F00580BE7 /* RooitExamNewsAPITests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		5E0974672796D66300580BE7 /* RooitExamDatabaseTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5E09746E2796D66300580BE7 /* Build configuration list for PBXNativeTarget "RooitExamDatabaseTests" */;
+			buildPhases = (
+				5E0974642796D66300580BE7 /* Sources */,
+				5E0974652796D66300580BE7 /* Frameworks */,
+				5E0974662796D66300580BE7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5E09746D2796D66300580BE7 /* PBXTargetDependency */,
+			);
+			name = RooitExamDatabaseTests;
+			productName = RooitExamDatabaseTests;
+			productReference = 5E0974682796D66300580BE7 /* RooitExamDatabaseTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -221,6 +285,10 @@
 						CreatedOnToolsVersion = 13.0;
 					};
 					5E0974432796BF2F00580BE7 = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = 5E0974192796BA8B00580BE7;
+					};
+					5E0974672796D66300580BE7 = {
 						CreatedOnToolsVersion = 13.0;
 						TestTargetID = 5E0974192796BA8B00580BE7;
 					};
@@ -241,6 +309,7 @@
 			targets = (
 				5E0974192796BA8B00580BE7 /* RooitExam */,
 				5E0974432796BF2F00580BE7 /* RooitExamNewsAPITests */,
+				5E0974672796D66300580BE7 /* RooitExamDatabaseTests */,
 			);
 		};
 /* End PBXProject section */
@@ -256,6 +325,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		5E0974422796BF2F00580BE7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5E0974662796D66300580BE7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -312,6 +388,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E09743C2796BE2000580BE7 /* TopHeadlinesRequest.swift in Sources */,
+				5E09745E2796CF9A00580BE7 /* Database.swift in Sources */,
 				5E0974382796BC4E00580BE7 /* NewsRequest.swift in Sources */,
 				5E09741E2796BA8B00580BE7 /* AppDelegate.swift in Sources */,
 				5E0974202796BA8B00580BE7 /* SceneDelegate.swift in Sources */,
@@ -328,6 +405,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5E0974642796D66300580BE7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E09746B2796D66300580BE7 /* RooitExamDatabaseTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -335,6 +420,11 @@
 			isa = PBXTargetDependency;
 			target = 5E0974192796BA8B00580BE7 /* RooitExam */;
 			targetProxy = 5E0974482796BF2F00580BE7 /* PBXContainerItemProxy */;
+		};
+		5E09746D2796D66300580BE7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5E0974192796BA8B00580BE7 /* RooitExam */;
+			targetProxy = 5E09746C2796D66300580BE7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -564,6 +654,50 @@
 			};
 			name = Release;
 		};
+		5E09746F2796D66300580BE7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jeremyxue.RooitExamDatabaseTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RooitExam.app/RooitExam";
+			};
+			name = Debug;
+		};
+		5E0974702796D66300580BE7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jeremyxue.RooitExamDatabaseTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RooitExam.app/RooitExam";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -590,6 +724,15 @@
 			buildConfigurations = (
 				5E09744B2796BF2F00580BE7 /* Debug */,
 				5E09744C2796BF2F00580BE7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5E09746E2796D66300580BE7 /* Build configuration list for PBXNativeTarget "RooitExamDatabaseTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5E09746F2796D66300580BE7 /* Debug */,
+				5E0974702796D66300580BE7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

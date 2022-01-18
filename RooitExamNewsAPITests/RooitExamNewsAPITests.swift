@@ -21,7 +21,7 @@ class RooitExamNewsAPITests: XCTestCase {
         let apiKey = NEWS_API_KEY
         NewsAPI.shared.configure(apiKey: apiKey)
         let promise = expectation(description: "Got top headlines articles")
-        var _articles: [TopHeadlineResponse.Article]?
+        var _articles: [Article]?
         var _error: Error?
         NewsAPI.shared.getTopHeadlines(country: "us") { result in
             switch result {
