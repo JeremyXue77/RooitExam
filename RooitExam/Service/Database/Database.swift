@@ -24,7 +24,7 @@ class Database<Item: Object> {
     // MARK: Methods
     func save(items: [Item]) throws {
         try realm.write {
-            realm.deleteAll()
+//            realm.deleteAll()
             realm.add(items)
         }
     }
