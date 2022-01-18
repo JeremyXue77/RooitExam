@@ -32,9 +32,15 @@ class NewsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupNavigation()
         setupTableView()
         viewModel.observeDatabase()
         viewModel.updateNews()
+    }
+    
+    // MARK: Setting Methods
+    private func setupNavigation() {
+        navigationItem.title = "Exam"
     }
     
     private func setupTableView() {
