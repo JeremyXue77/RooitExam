@@ -14,6 +14,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        #warning("Enter your news api key here")
+        NewsAPI.shared.configure(apiKey: NEWS_API_KEY)
         return true
     }
 
